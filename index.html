@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8" />
+    <link rel="icon" href="./images/money.png" />
+    <title>Bankify</title>
+  </head>
+  <body class="bg-secondary">
+    <h1 class="text-center">Bankify</h1>
+    <h2 class="text-center">Track your transactions with ease</h2>
+
+    <section class="container table-responsive">
+      <table class="table table-success table-striped align-middle text-center">
+        <thead>
+          <td class="w-25">
+            #
+            <button class="btn" onclick="idFilter()">
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+          </td>
+          <td class="w-25 pb-3">Name</td>
+          <td class="w-25">
+            Transactions amount
+            <button class="btn" onclick="transactionsFilter()">
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+          </td>
+          <td class="w-25 pb-3">Graphs</td>
+        </thead>
+        <tbody id="data-display"></tbody>
+      </table>
+    </section>
+
+    <div
+      id="overlay"
+      class="d-none position-absolute top-0 left-0 justify-content-center align-items-center w-100 vh-100"
+    >
+      <button
+        type="button"
+        class="btn-close position-absolute bg-white"
+        aria-label="Close"
+      ></button>
+      <div id="chart" class="w-50"></div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/test.js"></script>
+  </body>
+</html>
